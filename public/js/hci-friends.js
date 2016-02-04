@@ -3,6 +3,11 @@
 // Call this function when the page loads (the "ready" event)
 $(document).ready(function() {
 	initializePage();
+	$(".name").click(function(){
+		event.preventDefault();
+		
+		$(this).text(anagrammedName($(this).text()));
+	});
 })
 
 /*
@@ -44,3 +49,4 @@ function anagrammedName(name) {
 		return name;
 	}
 }
+
